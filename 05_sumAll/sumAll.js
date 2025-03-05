@@ -1,6 +1,10 @@
 const sumAll = function(a, b) {
     let sum = 0
-    for(let i = a; i<=b; i++){
+ 
+    if(Number.isInteger(a) == false || Number.isInteger(b) == false || a < 0 || b < 0){
+        return "ERROR"
+    }
+    for(let i = Math.min(a,b); i<= Math.max(a, b); i++){
         sum += i;
     };
     return sum;
